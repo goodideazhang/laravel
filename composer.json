@@ -13,7 +13,8 @@
         "laravel/tinker": "~1.0",
         "prettus/l5-repository": "^2.6",
         "silber/bouncer": "v1.0.0-beta.4",
-        "barryvdh/laravel-ide-helper": "*"
+        "barryvdh/laravel-ide-helper": "*",
+        "elasticsearch/elasticsearch": "~6.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -57,5 +58,11 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

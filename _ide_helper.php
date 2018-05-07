@@ -1167,7 +1167,8 @@ namespace Illuminate\Support\Facades {
          * @param string $concrete
          * @return mixed 
          * @throws \Illuminate\Contracts\Container\BindingResolutionException
-         * @static 
+         * @static
+         *
          */ 
         public static function build($concrete)
         {

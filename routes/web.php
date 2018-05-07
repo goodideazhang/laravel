@@ -16,16 +16,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/test','TestController@testSearch');
+//Auth::routes();
 
 
 Route::get('create','HomeController@create');
 
-Route::group(['middleware'=>['web','permission','auth']],function (Router $router){
-    $router->resource('test','TestController');
-    $router->resource('user','UserController');
-    $router->get('/home','HomeController@index')->name('home');
-});
+//Route::group(['middleware'=>['web']],function (Router $router){
+//    $router->resource('test','TestController');
+//    $router->resource('user','UserController');
+//    $router->get('/home','HomeController@index')->name('home');
+//});
 
 
 

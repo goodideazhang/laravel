@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use \event;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use MyFacade;
@@ -40,6 +41,10 @@ class TestController extends Controller
         $this->userRepo = $userRepository;
     }
 
+    public function testSearch(){
+        Auth::check();
+    }
+
 
     /**
      * Display a listing of the resource.
@@ -48,13 +53,23 @@ class TestController extends Controller
      */
     public function index()
     {
+
+
+    }
+
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
         /**
          * Test
          */
-
-        print_r('hello world');
-//
-        die();
+        $rs=asset('storage/');
+        config();
 
         /**
          * provider
@@ -114,18 +129,6 @@ class TestController extends Controller
 //        $abilities = $user->getAbilities();
 //        print_r($rs);
 
-
-    }
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
