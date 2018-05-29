@@ -1,33 +1,34 @@
-<div class="header-section">
+<header class="main-header">
 
-    <!--toggle button start-->
-    <a class="toggle-btn"><i class="fa fa-bars"></i></a>
-    <!--toggle button end-->
+    <!-- Logo -->
+    <a href="/main" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>E</b>AP</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Admin</b>EAP</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
 
-    <!--search start-->
-    <form class="searchform" action="index.html" method="post">
-        <input type="text" class="form-control" name="keyword" placeholder="搜索" />
-    </form>
-    <!--search end-->
+        <!-- Navbar Right Menu -->
 
-    <!--notification menu start -->
-    <div class="menu-right">
-        <ul class="notification-menu">
-            <li>
-                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <img src="images/photos/user-avatar.png" alt="" />
-                    涛哥
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                    <li><a href="#"><i class="fa fa-user"></i>  个人资料</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i>  修改密码</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i> 退出</a></li>
-                </ul>
-            </li>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
 
-        </ul>
-    </div>
-    <!--notification menu end -->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="/packages/adminlte/dist/img/user0-160x160.jpg" class="user-image"
+                             alt="User Image">
+                        <span class="hidden-xs">test</span>
+                    </a>
 
-</div>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>

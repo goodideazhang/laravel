@@ -10,24 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use \Illuminate\Routing\Router;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+function glob_recursive($pattern, $flags = 0)
+{
+    $files = glob($pattern, $flags);
+    foreach (glob(dirname($pattern) . '/*', GLOB_ONLYDIR | GLOB_NOSORT) as $dir) {
+        $files = array_merge($files, glob_recursive($dir . '/' . basename($pattern), $flags));
+    }
+    return $files;
+}
 
-Route::get('/test','TestController@testSearch');
+foreach (glob_recursive(__DIR__ . '/*_router.php') as $f) {
+   include_once $f;
+}
+
+//
+//Route::get('/show', 'HomeController@show');
+
+
 //Auth::routes();
 
 
-Route::get('create','HomeController@create');
-
-//Route::group(['middleware'=>['web']],function (Router $router){
-//    $router->resource('test','TestController');
-//    $router->resource('user','UserController');
-//    $router->get('/home','HomeController@index')->name('home');
-//});
 
 
 
-//Route::get('/home', 'HomeController@index')->name('home');

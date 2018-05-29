@@ -180,7 +180,8 @@ return [
         \Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \Encore\Admin\AdminServiceProvider::class,
         \Silber\Bouncer\BouncerServiceProvider::class,
-        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
+        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        \BotMan\BotMan\BotManServiceProvider::class,
 
     ],
 

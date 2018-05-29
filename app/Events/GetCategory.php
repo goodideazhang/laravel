@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use App\Http\Models\CategoryModel;
+use App\Http\Models\Category;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -21,7 +21,7 @@ class GetCategory
      * 事件
      * @return void
      */
-    public function __construct(CategoryModel $category)
+    public function __construct(Category $category)
     {
         $this->category=$category;
     }
