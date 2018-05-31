@@ -9,4 +9,6 @@ Route::group(['prefix'=>'/banner'], function ()  {
     Route::get('/index', 'BannerController@index');
     Route::get('/list', 'BannerController@list');
     Route::get('/create', 'BannerController@create');
+    Route::post('/upload','BannerController@upload');
+    Route::post('/delete_img','BannerController@deleteImg');
 });
